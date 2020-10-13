@@ -10,15 +10,16 @@ public static void main(String[] args) {
 		
 		String nome;
 		int idade, hora; 
-		int[] horariosP = {9,10};
-		int[] horariosC = {11,12};
-		String[] medicosP = {"Dr. Gonzales", "Dra. Simone"};
-		String[] medicosC = {"Dra. Regina", "Dr. Plínio"};
+		int[] horariosP = {9,10,14,15};
+		int[] horariosC = {11,12,16,17};
+		String[] medicosP = {"Dr. Gonzales", "Dra. Simone", "Dra. Tâmara"};
+		String[] medicosC = {"Dra. Regina", "Dr. Plínio", "Dr. Valter"};
 		int medico;
 
 		
 		System.out.println("Olá! Primeiramente, nos diga seu nome: ");
 		nome = ler.next();
+		
 		
 		System.out.println("Agora, nos diga sua idade: ");
 		idade = ler.nextInt();
@@ -38,26 +39,18 @@ public static void main(String[] args) {
 			
 			medico = ler.nextInt();
 			
-			for (int i=0; i<= 1 ; i++)
+			// MENORES DE 18 ANOS
+			
+			for (int i=0; i< horariosP.length ; i++)
 			{
 				System.out.println("Horários disponíveis: " + horariosP[i] + ":00 - Selecione: " + i + " para agendar");
+				
+				
 			}
-			
 			hora = ler.nextInt();
 			
-			switch (hora) 
-			{
-				case 0: 
-						System.out.println("Obrigado " + nome + ", sua consulta foi agendada para as " + horariosP[hora] + ":00 com "+ medicosP[medico]);
-						break;
-						
-				case 1: 
-						System.out.println("Obrigado " + nome + ", sua consulta foi agendada para as " + horariosP[hora] + ":00 com "+ medicosP[medico]);
-						break;
-						
-				default: 
-						System.out.println("Dados inválidos!");
-			}
+						System.out.println("Obrigado " + nome + ", sua consulta foi agendada para as " + horariosP[hora] + ":00 com "+ medicosP[medico]); 
+
 		}
 		
 		
@@ -73,24 +66,18 @@ public static void main(String[] args) {
 			
 			medico = ler.nextInt();
 			
-			for (int i=2; i< horariosC.length; i++)
+			//MAIORES DE 18 ANOS
+			
+			for (int i=0; i< horariosC.length; i++)
 			{
 				System.out.println("Horarios disponíveis: " + horariosC[i] + ":00 - Selecione: " + i + " para agendar.");				
 			}
 			
 			hora = ler.nextInt();
 			
-			switch (hora) 
-			{
-				case 2: 
-						System.out.println("Obrigado " + nome + ", sua consulta foi agendada para as " + horariosC[hora] + ":00 com "+ medicosC[medico]+".");
-						break;
-				case 3: 
-						System.out.println("Obrigado " + nome + ", sua consulta foi agendada para as " + horariosC[hora] + ":00 com "+ medicosC[medico]+".");
-						break;
-				default: 
-						System.out.println("Dados inválidos!");					
-			}
+			 
+			System.out.println("Obrigado " + nome + ", sua consulta foi agendada para as " + horariosC[hora] + ":00 com "+ medicosC[medico]+".");
+				
 		}
 		
 		else 
