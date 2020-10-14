@@ -1,2 +1,2 @@
-module projetoAgendamento {
+module medicoAgendamento {
 }
